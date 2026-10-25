@@ -1,0 +1,9 @@
+-r requirements.txt
+torch
+torchvision
+opencv-python
+PyYAML
+joblib
+tqdm
+fair-esm
+wandb

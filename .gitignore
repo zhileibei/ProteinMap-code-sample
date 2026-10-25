@@ -1,0 +1,59 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# Results and outputs (large, generated)
+results/
+*.pkl
+*.parquet
+
+# Data (large, not versioned)
+/data/
+*.h5ad
+*.npz
+*.fasta
+*.joblib
+.env
+.env.*
+
+# Model checkpoints (weights only, stored separately)
+checkpoints/
+*.ckpt
+*.pt
+*.pth
+
+# Configs with local paths (override with configs/*.yaml if needed)
+# configs/  ← keep configs tracked
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+wandb/
+lightning_logs/

@@ -1,0 +1,23 @@
+name: seq_rna_classifier
+seq_encoder:
+  type: esm2_pooled
+  esm2_dim: 1280
+  out_dim: 256
+vis_encoder:
+  type: none
+  backbone: resnet18
+  out_dim: 256
+  freeze_backbone: true
+rna_encoder:
+  type: mlp
+  n_genes: null       # injected at runtime from RNAExpressionLoader.n_genes
+  hidden_dim: 512
+  out_dim: 256
+fusion:
+  mode: concat
+  out_dim: null
+  gate: false
+heads:
+  n_classes: 29
+  dropout: 0.1
+  inpainting: false

@@ -1,0 +1,18 @@
+name: esm2_classifier
+seq_encoder:
+  type: esm2_pooled
+  esm2_dim: 1280
+  out_dim: 256
+vis_encoder:
+  type: none
+  out_dim: 256
+  backbone: resnet18
+  freeze_backbone: true
+fusion:
+  mode: single_seq
+  out_dim: null
+  gate: false
+heads:
+  n_classes: 29
+  dropout: 0.0
+  inpainting: false

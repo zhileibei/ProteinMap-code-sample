@@ -1,0 +1,18 @@
+name: image_seq_inpainting
+seq_encoder:
+  type: esm2_pooled
+  esm2_dim: 1280
+  out_dim: 256
+vis_encoder:
+  type: small_cnn
+  out_dim: 256
+  backbone: resnet18
+  freeze_backbone: true
+fusion:
+  mode: concat
+  out_dim: null
+  gate: false
+heads:
+  n_classes: 29
+  dropout: 0.0
+  inpainting: true
